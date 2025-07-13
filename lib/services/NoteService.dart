@@ -20,4 +20,16 @@ class NoteService {
   void addNote(Note note) {
     _box.put(note.id, note);
   }
+
+  void updateNote(Note note) {
+    _box.put(note.id, note);
+  }
+
+  void deleteNote(String id) {
+    _box.delete(id);
+  }
+
+  Note? getNote(String id) {
+    return _box.get(id);
+  }
 }
